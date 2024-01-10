@@ -13,11 +13,11 @@ class Solution {
         }
         if(dp[idx][amount]!=-1)
             return dp[idx][amount];
-        int notTake = helper(idx-1, amount, coins, dp);        
         int take =  0;
         if(coins[idx]<=amount){
             take = helper(idx, amount-coins[idx], coins, dp);
         }
+        int notTake = helper(idx-1, amount, coins, dp);        
         return dp[idx][amount] = take + notTake;
     }
 }
