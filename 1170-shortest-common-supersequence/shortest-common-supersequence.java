@@ -31,10 +31,10 @@ class Solution {
             }
         }
         while(i>0){
-            lcs.append(str1.charAt(--i));
+            lcs.append(str1.charAt(i-- - 1));
         }
         while(j>0) 
-            lcs.append(str2.charAt(--j));
+            lcs.append(str2.charAt(j-- - 1));
         return lcs.reverse().toString();
     }
 }
