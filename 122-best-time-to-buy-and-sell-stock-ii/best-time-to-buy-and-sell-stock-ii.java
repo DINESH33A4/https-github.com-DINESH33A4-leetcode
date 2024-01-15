@@ -6,9 +6,9 @@ class Solution {
         // int[] front = new int[2];
         int a1 = 0, a2 = 0;
         int b1 = 0, b2 = 0;
-        for(int i = 0; i<n; i++){
-            a1 = Math.max(prices[n-i-1] + b2, b1);
-            a2 = Math.max(-prices[n-i-1] + b1, b2);
+        for(int i = n-1; i>=0; i--){
+            a1 = Math.max(prices[i] + b2, b1);
+            a2 = Math.max(-prices[i] + b1, b2);
             b1 = a1;
             b2 = a2;
         }
