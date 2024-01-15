@@ -1,14 +1,14 @@
 class Solution {
     public int maxProfit(int[] prices) {
         int n = prices.length;
-        int[][][] dp = new int[n+1][2][4];
+        int[][][] dp = new int[n+1][2][3];
        for(int[][] i : dp)
             for(int[] j : i)
                 Arrays.fill(j, -1);
-        return helper(0, 1, 3, prices, dp);
+        return helper(0, 1, 2, prices, dp);
     }   
     private static int helper(int i, int buy, int k, int[] prices, int[][][] dp){
-        if(i==prices.length || k == 0)
+        if(i==prices.length || k < 0)
             return 0;
         if(dp[i][buy][k]!=-1)
             return dp[i][buy][k];
