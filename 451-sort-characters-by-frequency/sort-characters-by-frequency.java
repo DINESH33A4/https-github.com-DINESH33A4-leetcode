@@ -6,7 +6,7 @@ class Solution {
         PriorityQueue<mapping> pq = new PriorityQueue<>((a,b)->Integer.compare(b.freq, a.freq));
         for(Character i : freq.keySet())
             pq.add(new mapping(i, freq.get(i)));
-        StringBuilder sb = new StringBuilder();
+        StringBuffer sb = new StringBuffer();
         while(!pq.isEmpty()){
             mapping m = pq.poll(); 
             sb.append(String.valueOf(m.ch).repeat(m.freq));
