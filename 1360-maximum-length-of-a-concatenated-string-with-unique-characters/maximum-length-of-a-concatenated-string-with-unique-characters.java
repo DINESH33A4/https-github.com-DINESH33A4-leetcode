@@ -9,9 +9,8 @@ class Solution {
             return 0;
         if(idx == arr.size())
             return checked?dup.length():0;
-        if(m.containsKey(idx+dup))
-            return m.get(idx+dup);
-        m.put(idx+dup, Math.max(helper(idx+1, arr, dup+arr.get(idx), m),
+        if(!m.containsKey(idx+dup))
+            m.put(idx+dup, Math.max(helper(idx+1, arr, dup+arr.get(idx), m),
                                 helper(idx+1, arr, dup, m)));
         return m.get(idx+dup);
     }
