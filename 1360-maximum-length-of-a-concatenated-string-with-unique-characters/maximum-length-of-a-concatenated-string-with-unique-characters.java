@@ -1,7 +1,6 @@
 class Solution {
     public int maxLength(List<String> arr) {
-        HashMap<String, Integer> m = new HashMap<>();
-        return helper(0, arr, "", m);
+        return helper(0, arr, "", new HashMap<>());
     }
     private static int helper(int idx, List<String>arr, String dup,HashMap<String,Integer> m){
         boolean checked = check(dup);
