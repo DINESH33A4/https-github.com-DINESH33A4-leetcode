@@ -7,7 +7,7 @@ class Solution {
             for(int j = 0; j<i.length(); j++){
                 cnt[i.charAt(j) - 'a']++;
             }
-            StringBuilder s = new StringBuilder();
+            StringBuffer s = new StringBuffer();
             for(int j = 0; j<26; j++){
                 if(cnt[j] != 0)
                     s.append(((char)('a' + j)) + "," + cnt[j]);
