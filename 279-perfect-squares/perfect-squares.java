@@ -3,7 +3,7 @@ class Solution {
         ArrayList<Integer> al = generatePs(n);
         int size = al.size();
         int[][] dp = new int[size][n+1];
-        System.out.println(al);
+        // System.out.println(al);
         for(int i[] : dp)
             Arrays.fill(i, -1);
         return helper(size-1, n, dp, al);
